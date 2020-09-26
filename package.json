@@ -16,8 +16,8 @@
   ],
   "scripts": {
     "postinstall": "manypkg check",
-    "start": "echo \"Error: no start specified\" && exit 1",
-    "build": "echo \"Error: no build specified\" && exit 1",
+    "start": "lerna run start",
+    "build": "lerna run build",
     "test": "jest",
     "test:changed": "yarn test -o",
     "lint": "run-p lint:*",
@@ -54,6 +54,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@changesets/cli": "^2.10.3",
     "@manypkg/cli": "^0.16.1",
     "@types/jest": "^26.0.14",
     "copyfiles": "^2.3.0",
@@ -62,6 +63,7 @@
     "eslint-plugin-jest": "^24.0.2",
     "husky": "^4.2.5",
     "jest": "^26.4.2",
+    "lerna": "^3.22.1",
     "lint-staged": "^10.4.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
