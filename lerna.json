@@ -5,9 +5,10 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
+      "registry": "https://registry.npmjs.org/",
+      "access": "public",
       "conventionalCommits": true,
-      "message": "chore(release): publish",
-      "registry": "https://registry.npmjs.org/"
+      "message": "chore(release): publish"
     }
   }
 }
