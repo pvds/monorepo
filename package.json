@@ -18,7 +18,7 @@
     "postinstall": "manypkg check",
     "start": "lerna run start",
     "build": "lerna run build",
-    "publish": "lerna publish from-package -y --contents dist",
+    "publish-ci": "lerna publish from-package -y --contents dist",
     "test": "jest",
     "test:changed": "yarn test -o",
     "lint": "run-p lint:*",
