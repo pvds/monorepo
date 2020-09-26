@@ -1,23 +1,21 @@
 {
-  "name": "@pragmatics/package-boilerplate",
+  "private": true,
+  "name": "pragmatics",
   "version": "0.1.0",
-  "description": "Pragmatics package boilerplate",
+  "description": "Pragmatics monorepo",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pvds/package-boilerplate.git"
+    "url": "git+https://github.com/pvds/pragmatics.git"
   },
   "author": "pvds <pvdsteen@gmail.com>",
   "license": "ISC",
-  "homepage": "https://github.com/pvds/package-boilerplate",
-  "bugs": "https://github.com/pvds/package-boilerplate/issues",
+  "homepage": "https://github.com/pvds/pragmatics",
+  "bugs": "https://github.com/pvds/pragmatics/issues",
   "keywords": [
     "pragmatics"
   ],
-  "main": "index.js",
-  "files": [
-    "docs"
-  ],
   "scripts": {
+    "postinstall": "manypkg check",
     "start": "echo \"Error: no start specified\" && exit 1",
     "build": "echo \"Error: no build specified\" && exit 1",
     "test": "jest",
@@ -43,13 +41,23 @@
     "testEnvironment": "node",
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
-      "**/*.(spec|test).[tj]s?(x)]"
+      "**/*.(spec|test).[tj]s?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "dist"
+    ],
+    "modulePathIgnorePatterns": [
+      "dist"
     ]
   },
-  "devDependencies": {
-    "@pragmatics/eslint-config": "^1.0.0",
-    "@pragmatics/stylelint-config": "^2.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@manypkg/cli": "^0.16.1",
     "@types/jest": "^26.0.14",
+    "copyfiles": "^2.3.0",
+    "del-cli": "^3.0.1",
     "eslint": "^7.8.1",
     "eslint-plugin-jest": "^24.0.2",
     "husky": "^4.2.5",

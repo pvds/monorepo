@@ -1,0 +1,47 @@
+{
+  "name": "@pragmatics/stylelint-config-order",
+  "version": "2.1.2",
+  "description": "Opinionated stylelint config pragmatically ordering css properties",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pvds/stylelint-config-order.git"
+  },
+  "author": "pvds <pvdsteen@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://www.npmjs.com/package/@pragmatics/stylelint-config-order",
+  "bugs": {
+    "url": "https://github.com/pvds/stylelint-config-order/issues"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-order",
+    "stylelint-config",
+    "stylelint-plugin",
+    "css order",
+    "css grouping",
+    "property order",
+    "property grouping",
+    "declaration order",
+    "declaration grouping",
+    "pragmatic order",
+    "pragmatic grouping"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "clean": "del-cli dist",
+    "precopy": "yarn clean",
+    "copy": "run-p copy:*",
+    "copy:package": "copyfiles package.json index.js \"*.md\" dist",
+    "copy:docs": "cd ../../ && copyfiles \"docs/**/*\" packages/stylelint-config-order/dist",
+    "build": "yarn copy"
+  },
+  "peerDependencies": {
+    "stylelint": ">=13"
+  },
+  "dependencies": {
+    "stylelint-order": "^4.1.0"
+  },
+  "devDependencies": {
+    "stylelint": "^13.7.0"
+  }
+}

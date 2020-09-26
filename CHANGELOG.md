@@ -1,4 +1,4 @@
-# Changelog - [Package name]
+# Changelog - Pragmatics monorepo
 
 All notable changes to this project will be documented in this file.
 
@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-[commit description]
+- Initial monorepo structure
 
-[0.1.0]: https://github.com/pvds/package-boilerplate/tree/0.1.0
-[package-boilerplate]: https://github.com/pvds/package-boilerplate
+[0.1.0]: https://github.com/pvds/pragmatics/tree/0.1.0
+[package-boilerplate]: https://github.com/pvds/pragmatics
