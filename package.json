@@ -18,6 +18,7 @@
     "postinstall": "manypkg check",
     "start": "lerna run start",
     "build": "lerna run build",
+    "publish": "lerna publish from-package -y --contents dist",
     "test": "jest",
     "test:changed": "yarn test -o",
     "lint": "run-p lint:*",
@@ -27,13 +28,19 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "*.scss": "stylelint --fix --allow-empty-input",
     "*.js": "eslint --fix",
     "*": "prettier --write --ignore-unknown"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "jest": {
     "coverageDirectory": "coverage",
@@ -54,7 +61,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@changesets/cli": "^2.10.3",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@manypkg/cli": "^0.16.1",
     "@types/jest": "^26.0.14",
     "copyfiles": "^2.3.0",
