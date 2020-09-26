@@ -1,3 +1,14 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 2.1.0 (2020-09-26)
+
+### Features
+
+- add all [@pragmatics](https://github.com/pragmatics) packages ([79f1876](https://github.com/pvds/stylelint-config/commit/79f1876cad523fed10a84d34f9d5ca1043460caa))
+
 # Changelog - [@pragmatics/stylelint-config]
 
 All notable changes to this project will be documented in this file.
